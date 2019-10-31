@@ -120,6 +120,25 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
 
     @IBAction func startButtonPressed() {
         print("Start button pressed")
+        
+        var HP = 100
+        var hungry = 0
+        
+        Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { timer in
+            print("Game start")
+            HP -= 12
+            hungry += 10
+            self.outputLabel.setText("HP: \(HP)" + "Hunger: \(hungry)")
+            
+            if HP == 0 || hungry == 100 {
+                timer.invalidate()
+                
+            }
+            
+           
+            
+            
+        }
     }
     
     @IBAction func feedButtonPressed() {
