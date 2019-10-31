@@ -37,6 +37,8 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
     // ----------------------------------
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
+        
        
         
         

@@ -85,6 +85,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     // MARK: Actions
     // ---------------------
     
+    
     // 2. When person presses button on watch, send a message to the phone
     @IBAction func buttonPressed() {
         
