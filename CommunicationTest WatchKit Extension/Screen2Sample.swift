@@ -29,6 +29,16 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
         //@TODO
     }
     
+    func session(_ session: WCSession, didReceiveMessageData messageData: Data, replyHandler: @escaping (Data) -> Void) {
+        guard let image1 = UIImage(data: messageData) else { return  }
+        pokemonImageView.setImage(image1)
+        guard let image2 = UIImage(data: messageData) else { return  }
+        pokemonImageView.setImage(image2)
+        
+    }
+    
+    
+    
     // MARK: WatchKit Interface Controller Functions
     // ----------------------------------
     override func awake(withContext context: Any?) {
@@ -46,6 +56,8 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
+       
+        
         super.willActivate()
         
         

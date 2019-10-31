@@ -104,10 +104,11 @@ class ViewController: UIViewController, WCSessionDelegate  {
     
     @IBAction func pokemonButtonPressed(_ sender: Any) {
         print("You pressed the pikachu button")
+        outputLabel.insertText("\nyou selected pikachu")
         if (WCSession.default.isReachable == true) {
             
-            let image = UIImage(named: "pikachu.png")!
-            let choice1 = UIImagePNGRepresentation(image)
+            let image1 = UIImage(named: "pikachu.png")!
+            let choice1 = UIImagePNGRepresentation(image1)
             
             WCSession.default.sendMessageData(choice1!, replyHandler: { (data) -> Void in
                 // handle the response from the device
@@ -123,10 +124,11 @@ class ViewController: UIViewController, WCSessionDelegate  {
         
     @IBAction func caterpieButtonPressed(_ sender: Any) {
         print("You pressed the caterpie button")
+         outputLabel.insertText("\nyou selected caterpie")
         if (WCSession.default.isReachable == true) {
             
-            let image = UIImage(named: "pikachu.png")!
-            let choice2 = UIImagePNGRepresentation(image)
+            let image2 = UIImage(named: "caterpie.png")!
+            let choice2 = UIImagePNGRepresentation(image2)
             
             WCSession.default.sendMessageData(choice2!, replyHandler: { (data) -> Void in
                 // handle the response from the device

@@ -39,7 +39,7 @@
                                     <fontDescription key="font" type="system" pointSize="13"/>
                                     <connections>
                                         <action selector="nameButtonPressed" destination="AgC-eL-Hgc" id="eHT-Ns-0Sz"/>
-                                        <segue destination="TKJ-vR-82D" kind="push" id="D32-B0-Z4R"/>
+                                        <segue destination="TKJ-vR-82D" kind="push" id="KdY-Kt-HK9"/>
                                     </connections>
                                 </button>
                                 <button alignment="center" title="S" id="kff-c9-AJG">
@@ -106,7 +106,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="741" y="20"/>
+            <point key="canvasLocation" x="744" y="20"/>
         </scene>
     </scenes>
 </document>

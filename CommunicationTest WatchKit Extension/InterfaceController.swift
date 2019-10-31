@@ -39,10 +39,14 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         print("WATCH: Got message from Phone")
         // Message from phone comes in this format: ["course":"MADT"]
         let messageBody = message["course"] as! String
-        let image = UIImage(named: "pikachu.png") 
         messageLabel.setText(messageBody)
-        pokemonImageView.setImage(image)
-        
+    }
+    
+    func session(_ session: WCSession, didReceiveMessageData messageData: Data, replyHandler: @escaping (Data) -> Void) {
+        guard let image1 = UIImage(data: messageData) else { return  }
+        pokemonImageView.setImage(image1)
+        guard let image2 = UIImage(data: messageData) else { return  }
+        pokemonImageView.setImage(image2)
         
     }
     
@@ -109,7 +113,6 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBAction func nameButtonPressed() {
         print("name button pressed")
         
-        pushController(withName: "Screen2Sample", context: nil)
     }
 
     @IBAction func startButtonPressed() {
