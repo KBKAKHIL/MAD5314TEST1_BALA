@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14490.70" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14490.21"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Helvetica.ttc">
-            <string>Helvetica-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -44,6 +39,7 @@
                                     <fontDescription key="font" type="system" pointSize="13"/>
                                     <connections>
                                         <action selector="nameButtonPressed" destination="AgC-eL-Hgc" id="eHT-Ns-0Sz"/>
+                                        <segue destination="TKJ-vR-82D" kind="push" id="D32-B0-Z4R"/>
                                     </connections>
                                 </button>
                                 <button alignment="center" title="S" id="kff-c9-AJG">
@@ -81,7 +77,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="555" y="31.5"/>
+            <point key="canvasLocation" x="453" y="21"/>
         </scene>
         <!--Screen2 Sample-->
         <scene sceneID="rSw-iR-0SS">
@@ -110,7 +106,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="562" y="382"/>
+            <point key="canvasLocation" x="741" y="20"/>
         </scene>
     </scenes>
 </document>

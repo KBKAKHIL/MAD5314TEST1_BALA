@@ -56,7 +56,7 @@ class ViewController: UIViewController, WCSessionDelegate  {
         
         
         // 1. Check if phone supports WCSessions
-        print("view loaded")
+        print("phone view loaded")
         if WCSession.isSupported() {
             outputLabel.insertText("\nPhone supports WCSession")
             WCSession.default.delegate = self
@@ -103,10 +103,42 @@ class ViewController: UIViewController, WCSessionDelegate  {
     // MARK: Choose a Pokemon actions
     
     @IBAction func pokemonButtonPressed(_ sender: Any) {
-        print("You pressed the pokemon button")
+        print("You pressed the pikachu button")
+        if (WCSession.default.isReachable == true) {
+            
+            let image = UIImage(named: "pikachu.png")!
+            let choice1 = UIImagePNGRepresentation(image)
+            
+            WCSession.default.sendMessageData(choice1!, replyHandler: { (data) -> Void in
+                // handle the response from the device
+            }) { (error) -> Void in
+                print("error: \(error.localizedDescription)")
+                
+            }
+        
+        
+        }
     }
+        
+        
     @IBAction func caterpieButtonPressed(_ sender: Any) {
         print("You pressed the caterpie button")
+        if (WCSession.default.isReachable == true) {
+            
+            let image = UIImage(named: "pikachu.png")!
+            let choice2 = UIImagePNGRepresentation(image)
+            
+            WCSession.default.sendMessageData(choice2!, replyHandler: { (data) -> Void in
+                // handle the response from the device
+            }) { (error) -> Void in
+                print("error: \(error.localizedDescription)")
+                
+            }
+            
+            
+
+            
+        }
     }
     
     
