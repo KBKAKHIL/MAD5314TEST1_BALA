@@ -8,6 +8,8 @@
 
 import UIKit
 import WatchConnectivity
+//qwerty
+//
 
 class ViewController: UIViewController, WCSessionDelegate  {
 
