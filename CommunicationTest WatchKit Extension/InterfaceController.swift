@@ -24,6 +24,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     // Label for other messages (HP:100, Hunger:0)
     @IBOutlet var outputLabel: WKInterfaceLabel!
     
+    var HP = 100
+    var hungry = 0
+    
     
     
     // MARK: Delegate functions
@@ -121,32 +124,33 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     @IBAction func startButtonPressed() {
         print("Start button pressed")
         
-        var HP = 100
-        var hungry = 0
-        
         Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { timer in
             print("Game start")
-            HP -= 12
-            hungry += 10
-            self.outputLabel.setText("HP: \(HP)" + "Hunger: \(hungry)")
+            self.HP -= 12
+            self.hungry += 10
             
-            if HP == 0 || hungry == 100 {
+        
+            self.outputLabel.setText("HP: \(self.HP)" + "Hunger: \(self.hungry)")
+            
+            if self.HP == 0 || self.hungry == 100 {
                 timer.invalidate()
-                
             }
             
-           
-            
+
             
         }
     }
     
     @IBAction func feedButtonPressed() {
         print("Feed button pressed")
+        
+        self.HP += 5
+    
     }
     
     @IBAction func hibernateButtonPressed() {
         print("Hibernate button pressed")
+        
     }
     
 }
