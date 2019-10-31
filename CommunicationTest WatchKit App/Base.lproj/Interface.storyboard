@@ -29,12 +29,13 @@
                             </items>
                         </group>
                         <imageView width="47" height="47" alignment="center" image="pokeball" id="RxI-YZ-AgM"/>
-                        <label alignment="center" text="Albert is hungry" id="QdJ-Fj-LrR">
-                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                        <label width="134" height="19" alignment="center" text="Name your Pokemon!" textAlignment="center" numberOfLines="2" id="QdJ-Fj-LrR">
+                            <fontDescription key="font" type="system" pointSize="12"/>
                         </label>
                         <group width="1" alignment="left" id="zVJ-eg-oyl">
                             <items>
                                 <button alignment="center" title="N" id="sSF-lA-oJl">
+                                    <accessibilityTraits key="accessibilityTraits" button="YES" staticText="YES"/>
                                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="font" type="system" pointSize="13"/>
                                     <connections>

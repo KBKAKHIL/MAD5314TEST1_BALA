@@ -29,13 +29,7 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
         //@TODO
     }
     
-    func session(_ session: WCSession, didReceiveMessageData messageData: Data, replyHandler: @escaping (Data) -> Void) {
-        guard let image1 = UIImage(data: messageData) else { return  }
-        pokemonImageView.setImage(image1)
-        guard let image2 = UIImage(data: messageData) else { return  }
-        pokemonImageView.setImage(image2)
-        
-    }
+    
     
     
     
@@ -43,6 +37,7 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
     // ----------------------------------
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+       
         
         
         // 1. Check if the watch supports sessions
@@ -56,6 +51,7 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
     
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
+        
        
         
         super.willActivate()
@@ -77,7 +73,19 @@ class Screen2Sample: WKInterfaceController, WCSessionDelegate {
     
     @IBAction func selectNameButtonPressed() {
         print("select name button pressed")
-    }
-    
+        
+        let cannedResponses = ["PIKACHU", "BULBASAUR", "CHARMANDER", "CATERPIE", "MINNIE", "PICHU", "RAICHU"]
+        presentTextInputController(withSuggestions: cannedResponses, allowedInputMode: .plain) {
+            
+            (results) in
+            
+            if (results != nil && results!.count > 0) {
+                let userResponse = results?.first as? String
+                print(userResponse!)
+                    self.nameLabel.setText(userResponse)
+            }
+            
 
+        }
+    }
 }

@@ -48,6 +48,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
         guard let image2 = UIImage(data: messageData) else { return  }
         pokemonImageView.setImage(image2)
         
+        
     }
     
 
@@ -56,6 +57,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     // ----------------------------------
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
         
         
         // 1. Check if teh watch supports sessions
@@ -112,7 +114,7 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     // MARK: Functions for Pokemon Parenting
     @IBAction func nameButtonPressed() {
         print("name button pressed")
-        
+
     }
 
     @IBAction func startButtonPressed() {
